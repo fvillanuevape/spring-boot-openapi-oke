@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: customer-api-service
+  name: article-api-service
 spec:
   type: LoadBalancer
   selector:
-    app: customer-api
+    app: article-api
   ports:
     - protocol: TCP
       port: 80

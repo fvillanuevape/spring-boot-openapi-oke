@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: article-api
-          image: iad.ocir.io/idaguzmb9zyu/artcile-api:v
+          image: iad.ocir.io/idaguzmb9zyu/prima/artcile-api:1.0.0-dev
           ports:
             - containerPort: 8080
