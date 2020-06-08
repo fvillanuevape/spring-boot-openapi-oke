@@ -32,7 +32,7 @@ build/
 /mvnw
 /mvnw.cmd
 /.mvn/
-*.sql
+
 
 ### Eclipse ###
 .metadata
