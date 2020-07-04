@@ -1,4 +1,4 @@
-package pe.com.prima;
+package pe.com.fiztec;
 
 public class ClientException extends RuntimeException {
 

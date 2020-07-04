@@ -1,4 +1,4 @@
-package pe.com.prima;
+package pe.com.fiztec;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;

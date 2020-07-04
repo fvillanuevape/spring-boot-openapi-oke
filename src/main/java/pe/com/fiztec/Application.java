@@ -1,4 +1,4 @@
-package pe.com.prima;
+package pe.com.fiztec;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

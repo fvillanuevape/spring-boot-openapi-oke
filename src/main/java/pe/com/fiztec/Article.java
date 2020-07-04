@@ -1,4 +1,4 @@
-package pe.com.prima;
+package pe.com.fiztec;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
