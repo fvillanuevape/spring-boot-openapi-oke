@@ -8,7 +8,7 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pe.com.prima</groupId>
+	<groupId>pe.com.fiztec</groupId>
 	<artifactId>demo-oke</artifactId>
 	<version>1.0.0</version>
 	<name>demo-oke</name>
