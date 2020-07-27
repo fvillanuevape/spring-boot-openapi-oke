@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/articles/v1")
+@RequestMapping("/article/v1")
 public class ArticlesController {
 
     private ArticlesService service;
@@ -13,7 +13,6 @@ public class ArticlesController {
     public ArticlesController(ArticlesService service) {
         this.service = service;
     }
-
     @GetMapping(value = "/getmultiple", params = "amount", produces = "application/json")
     public ResponseEntity<Iterable<Article>> getMultipleArticles(
             @RequestParam(name = "amount", required = true) int amount) {

@@ -35,7 +35,7 @@ public class ArticlesService {
 
     public Article getArticle(String id) {
         Optional<Article> optionalArticle = repo.findById(Integer.valueOf(id));
-        if (optionalArticle.isPresent()) {
+        if (!optionalArticle.isPresent()) {
             throw new NotFoundException("Article Not Found");
         } else {
             return optionalArticle.get();

@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  article-api:
+    image: article-api:v1
+    ports:
+      - 8080:8080
