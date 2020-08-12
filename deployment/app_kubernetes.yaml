@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: article-api
-          image: iad.ocir.io/id568hhfi6xe/prima/article-api:1.0.0-dev
+          image: article-api:v1
           ports:
             - containerPort: 8080
