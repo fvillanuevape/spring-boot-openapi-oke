@@ -1,6 +1,9 @@
 version: "3.7"
 services:
   article-api:
-    image: article-api:v1
+    image: article-api:v2
+    environment:
+      - SPRING_DB_PASSWORD=password
+      - SPRING_DB_USERNAME=sa
     ports:
       - 8080:8080

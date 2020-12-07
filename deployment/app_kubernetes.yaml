@@ -16,6 +16,21 @@ spec:
     spec:
       containers:
         - name: article-api
-          image: article-api:v1
+          image: article-api:v2
           ports:
             - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
+            - name: SPRING_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: secret-basic-auth
+                  key: password
+            - name: SPRING_DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: secret-basic-auth
+                  key: username
+
+
