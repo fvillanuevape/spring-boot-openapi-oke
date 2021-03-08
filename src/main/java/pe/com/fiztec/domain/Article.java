@@ -1,4 +1,4 @@
-package pe.com.fiztec;
+package pe.com.fiztec.domain;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;

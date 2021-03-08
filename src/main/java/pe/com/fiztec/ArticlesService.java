@@ -2,6 +2,7 @@ package pe.com.fiztec;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import pe.com.fiztec.domain.Article;
 
 import java.util.Optional;
 

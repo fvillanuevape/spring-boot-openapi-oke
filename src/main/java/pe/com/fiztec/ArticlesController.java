@@ -3,6 +3,7 @@ package pe.com.fiztec;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pe.com.fiztec.domain.Article;
 
 @RestController
 @RequestMapping("/article/v1")
