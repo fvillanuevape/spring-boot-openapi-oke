@@ -14,20 +14,24 @@ public class ArticlesController {
     public ArticlesController(ArticlesService service) {
         this.service = service;
     }
-    @GetMapping(value = "/getmultiple", params = "amount", produces = "application/json")
+    @GetMapping(value = "/articles", produces = "application/json")
+    public ResponseEntity<Iterable<Article>> getAllArticles(){
+        return ResponseEntity.ok(service.getAllArticle());
+    }
+    @GetMapping(value = "/articles", params = "amount", produces = "application/json")
     public ResponseEntity<Iterable<Article>> getMultipleArticles(
             @RequestParam(name = "amount", required = true) int amount) {
         return ResponseEntity.ok(service.getMultipleArticles(amount));
     }
 
 
-    @GetMapping(value = "/getone", params = "id", produces = "application/json")
+    @GetMapping(value = "/article", params = "id", produces = "application/json")
     public ResponseEntity<Article> getSingleArticle(@RequestParam(name = "id", required = true) String id) {
         return ResponseEntity.ok(service.getArticle(id));
     }
 
 
-    @PostMapping(value = "/create", consumes = "application/json", produces = "application/json")
+    @PostMapping(value = "/article", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Article> createNewArticle(@RequestBody Article article) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.createArticle(article));
     }

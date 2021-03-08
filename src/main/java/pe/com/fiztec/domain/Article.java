@@ -31,15 +31,21 @@ public class Article {
     @Column(name = "creationDate")
     private String creationDate;
 
+    @Column(name = "description")
+    private String description;
+
     public Article() {
     }
 
-    public Article(String title, String url, String author, String creationDate) {
+    public Article(@NotNull @NotBlank int id, String title, String url, String author, String creationDate, String description) {
+        this.id = id;
         this.title = title;
         this.url = url;
         this.author = author;
         this.creationDate = creationDate;
+        this.description = description;
     }
+
 
     public int getId() {
         return id;
@@ -88,9 +94,23 @@ public class Article {
         this.creationDate = creationDate;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
-        return "Article [id=" + id + ", title=" + title + ", url=" + url + ", author=" + author + ", creationDate="
-                + creationDate + "]";
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", author='" + author + '\'' +
+                ", creationDate='" + creationDate + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
