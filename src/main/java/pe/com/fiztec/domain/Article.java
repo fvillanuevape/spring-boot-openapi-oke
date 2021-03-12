@@ -15,8 +15,6 @@ public class Article {
     @Column(name = "articleId")
     @GeneratedValue(generator = "articles_generator")
     @SequenceGenerator(name = "articles_generator", initialValue = 10)
-    @NotNull
-    @NotBlank
     private int id;
 
     @Column(name = "articleTitle")

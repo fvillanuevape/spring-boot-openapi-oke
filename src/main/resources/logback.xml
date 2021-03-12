@@ -33,13 +33,23 @@
     </appender>
 
     <!-- LOG everything at INFO level -->
-    <root level="info">
+    <root level="debug">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </root>
 
     <!-- LOG "pe.com.fiztec*" at TRACE level -->
-    <logger name="pe.com.fiztec" level="trace" additivity="false">
+    <logger name="pe.com.fiztec.*" level="debug" additivity="false">
+        <appender-ref ref="RollingFile" />
+        <appender-ref ref="Console" />
+    </logger>
+    <!--
+    <logger name="org.hibernate" level="debug">
+        <appender-ref ref="RollingFile" />
+        <appender-ref ref="Console" />
+    </logger>
+    -->
+    <logger name="org.springframework.*" level="debug">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>

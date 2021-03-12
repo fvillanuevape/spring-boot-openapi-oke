@@ -16,6 +16,7 @@ public class ArticlesController {
     }
     @GetMapping(value = "/articles", produces = "application/json")
     public ResponseEntity<Iterable<Article>> getAllArticles(){
+
         return ResponseEntity.ok(service.getAllArticle());
     }
     @GetMapping(value = "/articles", params = "amount", produces = "application/json")
@@ -34,6 +35,10 @@ public class ArticlesController {
     @PostMapping(value = "/article", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Article> createNewArticle(@RequestBody Article article) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.createArticle(article));
+    }
+    @PostMapping(value = "articles",consumes = "application/json", produces = "application/json")
+    public ResponseEntity<Iterable<Article>> createNewArticleAll(@RequestBody Iterable<Article> articles){
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.createAll(articles));
     }
 
     @ExceptionHandler(ClientException.class)

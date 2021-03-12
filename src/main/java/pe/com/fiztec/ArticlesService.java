@@ -33,6 +33,9 @@ public class ArticlesService {
         return null;
     }
 
+    public Iterable<Article> createAll(Iterable<Article> articles){
+        return repo.saveAll(articles);
+    }
     public Article createArticle(Article article) {
         if (article.getTitle().isEmpty()) {
             throw new ClientException("Input not valid (no title)");
