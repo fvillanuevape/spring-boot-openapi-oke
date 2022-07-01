@@ -22,7 +22,7 @@ public class Application {
 						.title("Article API")
 						.version(appVersion)
 						.description(appDesciption)
-						.contact(new Contact().name("Fidel Villanueva").email("villanuevafidelid@gmail.com"))
+						.contact(new Contact().name("API Demo").email("api@app.com"))
 						.termsOfService("http://swagger.io/terms/")
 						.license(new License().name("Apache 2.0").url("http://springdoc.org")));
 	}

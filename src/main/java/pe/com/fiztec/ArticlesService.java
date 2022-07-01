@@ -43,13 +43,17 @@ public class ArticlesService {
         return repo.save(article);
     }
 
-    public Article getArticle(String id) {
-        Optional<Article> optionalArticle = repo.findById(Integer.valueOf(id));
-        if (!optionalArticle.isPresent()) {
+    public Article getArticle(int id) {
+        Optional<Article> optionalArticle = repo.findById(id);
+        if (optionalArticle.isPresent()) {
             throw new NotFoundException("Article Not Found");
         } else {
             return optionalArticle.get();
         }
+    }
+
+    public  void deletArticle(int id){
+        repo.deleteById(id);
     }
 
 }
