@@ -10,6 +10,13 @@
 
 `Tener en cuenta que es una demo sobre como desplegar una API desarrollado en Spring Boot y desplegado en Kubernetes y de runtime de contenedor con Docker, ya que por lo general en un ambiente productivo se contaría con una arquitectura de solución con distinto servicos de cloud.`
 
+## Detalle de API y OpenAPI
+
+| Detalle     | Valor |
+|-------------|-------|
+| API Article |    http://localhost:8090/api/v1/article   |
+| Swagger UI  |   http://localhost:8090/swagger-ui/index.html#/    |
+| Open API    |    http://localhost:8090/v3/api-docs   |
 
 
 ## Documentación
